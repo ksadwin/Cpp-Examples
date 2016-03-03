@@ -1,0 +1,56 @@
+Algorithm:
+
+    Create an (empty) stack of spots to check
+    Add the start location to it
+
+    create a vector to represent badSteps
+
+    If the stack is empty, the exit is unreachable; print error message that maze is unsolvable.
+    If not get the "next" location to check from the stack.
+
+
+//accesses next element and uses the array that getNextMoves() returns to loop
+//uses a copy of a stack of Positions that has a pointer to the already created stack
+
+//when the copy of the stack is not empty and dontGoBackwards is true...
+//access the next element of the copied stack and set dontGoBackwards to false
+
+//remove top element of the copied stack
+
+//if that spot is the end off the maze then clean up memory and leave function with value true
+
+//if spot is not the end then check if its a validlocation
+//and use iterator to beginning and to end with creates vector badSteps
+//and dontGoBackwards is true
+
+//inserts spot to stack
+//if the maze is not solved
+//push back the top element of the stack to the vector badSteps
+//remove top element of the stack with pop
+
+//clean up memory
+//return false if maze is not solved
+
+    If the location is the exit spot, output the path that worked
+    Else:
+        compute all the adjacent up, right, down, left locations that are inside the maze and aren't walls, and add them to the stack to look at later, also checking that they have not previously been added to the stack.
+
+    Also, record that the location has been checked before so you won't have to check it again.
+    A location is considered "checked" once its neighbors have been put on the stack. The neighbors themselves are not "checked" until they are removed from the stack and checked for their neighbors.
+
+-----------------------------------------------------------------------------------------------------------
+How would your algorithm change if you used the other data structure (what would be different about your maze solver if you switched your stack for a queue, or your queue for a stack)?
+
+If there was a queue used instead of a stack it would be necessary to
+
+
+
+------------------------------------------------------------------------------------------------------------
+Would your algorithm work for situations where there were multiple paths (including loops in the paths)?  If not, how could it be changed to handle that situation?
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------
